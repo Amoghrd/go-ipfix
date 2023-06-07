@@ -48,10 +48,10 @@ spec:
     spec:
       containers:
       - args:
-        - --v=0
         - --ipfix.port=4739
         - --ipfix.transport=tcp
-        image: projects.registry.vmware.com/antrea/ipfix-collector:latest
+        - --customRegistry=2
+        image: quay.io/jpinsonn/ipfix-collector:test
         imagePullPolicy: IfNotPresent
         name: ipfix-collector
         ports:
